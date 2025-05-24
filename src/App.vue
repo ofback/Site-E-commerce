@@ -1,16 +1,11 @@
 <script setup>
 import Navbar from './components/NavBar.vue'
-import HeroBanner from './components/HeroBanner.vue'
-import BrandStrip from './components/BrandStrip.vue'
-import NewArrivals from './components/NewArrivals.vue'
 </script>
 
 <template>
   <div>
     <Navbar />
-    <HeroBanner />
-    <BrandStrip />
-    <NewArrivals />
+    <router-view></router-view>
   </div>
 </template>
 

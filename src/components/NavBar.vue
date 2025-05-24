@@ -1,12 +1,12 @@
 <template>
   <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
     <div class="container">
-      <a class="navbar-brand fw-bold text-dark" href="#">
+      <router-link class="navbar-brand fw-bold text-dark" to="/">
         <div class="d-flex align-items-center gap-2">
           <img :src="logo" alt="Logo" style="height: 24px;" />
           <span class="fw-bold">FASHION</span>
         </div>
-      </a>
+      </router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -17,14 +17,14 @@
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-4">
-          <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">CATALOGUE</a></li>
-          <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">FASHION</a></li>
-          <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">FAVOURITE</a></li>
-          <li class="nav-item"><a class="nav-link text-dark fw-semibold" href="#">LIFESTYLE</a></li>
+          <li class="nav-item"><router-link class="nav-link text-dark fw-semibold" to="/catalogue">CATALOGUE</router-link></li>
+          <li class="nav-item"><router-link class="nav-link text-dark fw-semibold" to="/fashion">FASHION</router-link></li>
+          <li class="nav-item"><router-link class="nav-link text-dark fw-semibold" to="/favourite">FAVOURITE</router-link></li>
+          <li class="nav-item"><router-link class="nav-link text-dark fw-semibold" to="/lifestyle">LIFESTYLE</router-link></li>
         </ul>
       </div>
       <div class="d-none d-lg-block">
-        <button class="btn btn-dark rounded-pill px-4 fw-semibold">SIGN UP</button>
+        <router-link to="/login" class="btn btn-dark rounded-pill px-4 fw-semibold">SIGN UP</router-link>
       </div>
     </div>
   </nav>

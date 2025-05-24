@@ -3,7 +3,7 @@
       <div class="container d-flex flex-column flex-lg-row align-items-center gap-5">
         <div class="text-center text-lg-start">
           <h1 class="fw-bold display-5">
-            LET’S <span class="d-block">EXPLORE <span class="bg-warning px-2">UNIQUE</span></span>
+            LET'S <span class="d-block">EXPLORE <span class="bg-warning px-2">UNIQUE</span></span>
             <span class="d-block">CLOTHES.</span>
           </h1>
           <p class="lead mt-3">
