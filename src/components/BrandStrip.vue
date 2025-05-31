@@ -1,18 +1,34 @@
 <template>
-    <section class="bg-warning py-3">
-      <div class="container d-flex flex-wrap justify-content-center align-items-center gap-4">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/H%26M-Logo.svg" alt="H&M" height="30" />
-        <img src="https://1000logos.net/wp-content/uploads/2020/09/Obey-Logo.png" alt="Obey" height="30" />
-        <img src="https://cdn.worldvectorlogo.com/logos/shopify.svg" alt="Shopify" height="30" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Lacoste_logo.svg" alt="Lacoste" height="30" />
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Levis_logo.svg" alt="Levi's" height="30" />
-      </div>
-    </section>
-  </template>
+  <section class="bg-warning py-3">
+    <div class="container d-flex flex-wrap justify-content-center align-items-center gap-4">
+      <img :src="hm" alt="H&M" height="30" />
+      <img :src="obey" alt="Obey" height="50" />
+      <img :src="shopify" alt="Shopify" height="30" />
+      <img :src="lacoste" alt="Lacoste" height="30" />
+      <img :src="levis" alt="Levi's" height="50" />
+      <img :src="amazon" alt="Amazon" height="30" />
+    </div>
+  </section>
+</template>
   
-  <script>
+<script>
+  import hm from '../assets/imagens/hm.svg'
+  import obey from '../assets/imagens/Obey.png'
+  import shopify from '../assets/imagens/shopfy.svg'
+  import lacoste from '../assets/imagens/lacoste.svg'
+  import levis from '../assets/imagens/levis.png'
+  import amazon from '../assets/imagens/amazon.svg'
   export default {
-    name: 'BrandStrip'
+    name: 'BrandStrip',
+    data() {
+      return {
+        hm,
+        obey,
+        shopify,
+        lacoste,
+        levis,
+        amazon
+      }
+    }
   }
-  </script>
-  
+</script>

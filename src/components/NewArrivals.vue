@@ -13,7 +13,11 @@
   
   <script>
   import ProductCard from './ProductCard.vue'
-  
+
+  import tshirt from '../assets/imagens/modelo_produtos1.png'
+  import jeans from '../assets/imagens/modelo_produtos2.png'
+  import jacket from '../assets/imagens/modelo_produtos3.png'
+    
   export default {
     name: 'NewArrivals',
     components: { ProductCard },
@@ -21,24 +25,19 @@
       return {
         products: [
           {
-            image: 'https://i.imgur.com/8Km9tLL.png',
+            image: tshirt,
             name: 'T-Shirt With Tape Details',
             price: '$120'
           },
           {
-            image: 'https://i.imgur.com/VHbXrDj.png',
+            image: jeans,
             name: 'Skinny Fit Jeans',
             price: '$150'
           },
           {
-            image: 'https://i.imgur.com/XKFkBbn.png',
+            image: jacket,
             name: 'Black Leather Jacket',
             price: '$220'
-          },
-          {
-            image: 'https://i.imgur.com/9M5OHPp.png',
-            name: 'Oversized Hoodie',
-            price: '$180'
           }
         ]
       }
