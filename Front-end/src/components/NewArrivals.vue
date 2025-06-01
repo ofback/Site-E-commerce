@@ -1,7 +1,7 @@
 <template>
     <section class="py-5">
       <div class="container text-center">
-        <h2 class="fw-bold mb-4">NEW ARRIVALS</h2>
+        <h2 class="fw-bold mb-4 text-start">NEW ARRIVALS</h2>
         <div class="row g-4 justify-content-center">
           <div class="col-6 col-md-4 col-lg-3" v-for="(product, index) in products" :key="index">
             <ProductCard :image="product.image" :name="product.name" :price="product.price" />

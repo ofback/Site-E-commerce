@@ -9,7 +9,7 @@
         <p class="lead mt-3">
           Live for influential and innovative fashion!
         </p>
-        <button class="btn btn-dark rounded-pill px-4 mt-3">SHOP NOW</button>
+        <button type="button" class="btn btn-dark">SHOP NOW</button>
       </div>
     </div>
 

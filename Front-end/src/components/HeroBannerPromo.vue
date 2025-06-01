@@ -12,7 +12,8 @@
           *Terms & Conditions apply
         </p>
         
-        <button class="btn btn-dark rounded-pill px-4 mt-3">SHOP NOW</button>
+        <button type="button" class="btn btn-dark">SHOP NOW</button>
+        
       </div>
     </div>
 

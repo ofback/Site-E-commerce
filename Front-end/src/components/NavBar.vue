@@ -40,8 +40,8 @@
 
         <!-- Botões de ação -->
         <div class="d-flex gap-2 mt-3 mt-lg-0">
-          <router-link to="/usuarios/cadastrar" class="btn btn-dark rounded-pill px-4 fw-semibold">SIGN UP</router-link>
-          <router-link to="/login" class="btn btn-dark rounded-pill px-4 fw-semibold">SIGN IN</router-link>
+          <router-link to="/usuarios/cadastrar" class="btn btn-dark rounded-3 px-4 fw-semibold">SIGN UP</router-link>
+          <router-link to="/login" class="btn btn-dark rounded-3 px-4 fw-semibold">SIGN IN</router-link>
         </div>
       </div>
     </div>
