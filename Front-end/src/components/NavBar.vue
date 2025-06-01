@@ -24,7 +24,7 @@
         </ul>
       </div>
       <div class="d-none d-lg-block">
-        <router-link to="/login" class="btn btn-dark rounded-pill px-4 fw-semibold">SIGN UP</router-link>
+        <router-link to="/login" class="btn btn-dark rounded-pill px-4 fw-semibold">SIGN IN</router-link>
       </div>
     </div>
   </nav>
