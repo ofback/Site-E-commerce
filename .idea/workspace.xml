@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c10cbab-e836-4ae8-913a-1ecac77509f2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Front-end/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/AppMobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/Download_android.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/Download_ios.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/Obey.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/amazon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/hm.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/lacoste.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/levis.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/modelo_capa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/modelo_produto5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/modelo_produtos1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/modelo_produtos2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/modelo_produtos3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/modelo_promoção.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/modelos_produto4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/redes_Sociais.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/shopfy.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/vetor amarelo Arrivals.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/vetor_estrela.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/imagens/vetor_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/assets/vue.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/components/BrandStrip.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/components/HeroBanner.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/components/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/components/NavBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/components/NewArrivals.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/components/ProductCard.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/components/users/UserForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/components/users/UserList.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/views/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/AppMobile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/Download_android.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/Download_ios.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/Obey.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/amazon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/hm.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/lacoste.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/levis.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/modelo_capa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/modelo_produto5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/modelo_produtos1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/modelo_produtos2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/modelo_produtos3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/modelo_promoção.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/modelos_produto4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/redes_Sociais.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/shopfy.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/vetor amarelo Arrivals.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/vetor_estrela.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imagens/vetor_logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/vue.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BrandStrip.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HeroBanner.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewArrivals.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductCard.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/UserForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/users/UserList.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home.vue" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "GabrielAlves20"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ofback/Site-E-commerce.git",
+    "accountId": "a08223ae-49c5-430e-b938-b3c68db5a981"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2xuZzu3RnuRFGQYubzTapRtKcA2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "develop",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c10cbab-e836-4ae8-913a-1ecac77509f2" name="Changes" comment="" />
+      <created>1748790187641</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748790187641</updated>
+    </task>
+    <servers />
+  </component>
+</project>
