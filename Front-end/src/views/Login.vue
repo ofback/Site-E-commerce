@@ -1,50 +1,63 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from 'vue'
+import axios from 'axios'
+import { useRouter } from 'vue-router'
 
-const email = ref('');
-const password = ref('');
-const errors = ref({});
-const isLoading = ref(false);
+const email = ref('')
+const password = ref('')
+const errors = ref({})
+const isLoading = ref(false)
+const router = useRouter()
 
 const validateForm = () => {
-  errors.value = {};
+  errors.value = {}
 
   if (!email.value) {
-    errors.value.email = 'O email é obrigatório';
+    errors.value.email = 'O email é obrigatório'
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-    errors.value.email = 'Por favor, insira um email válido';
+    errors.value.email = 'Por favor, insira um email válido'
   }
 
   if (!password.value) {
-    errors.value.password = 'A senha é obrigatória';
+    errors.value.password = 'A senha é obrigatória'
   } else if (password.value.length < 6) {
-    errors.value.password = 'A senha deve ter pelo menos 6 caracteres';
+    errors.value.password = 'A senha deve ter pelo menos 6 caracteres'
   }
 
-  return Object.keys(errors.value).length === 0;
-};
+  return Object.keys(errors.value).length === 0
+}
 
 const handleSubmit = async () => {
-  if (!validateForm()) return;
+  if (!validateForm()) return
+
+  isLoading.value = true
 
   try {
-    isLoading.value = true;
-
-    console.log('Formulário enviado:', {
+    const response = await axios.post('http://localhost:8080/login', {
       email: email.value,
-      password: password.value,
-    });
+      senha: password.value, // ou "password", depende do backend
+    })
 
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    console.log('Login bem-sucedido:', response.data)
 
-    alert('Login simulado com sucesso!');
+    // Exemplo: salvar token no localStorage
+    if (response.data.token) {
+      localStorage.setItem('token', response.data.token)
+    }
 
+    alert('Login realizado com sucesso!')
+    router.push('/dashboard') // ou qualquer rota de destino após login
   } catch (error) {
-    console.error('Erro ao fazer login:', error);
+    console.error('Erro no login:', error)
+    if (error.response?.data?.message) {
+      alert('Erro: ' + error.response.data.message)
+    } else {
+      alert('Erro ao tentar logar. Verifique as credenciais.')
+    }
   } finally {
-    isLoading.value = false;
+    isLoading.value = false
   }
-};
+}
 </script>
 
 <template>
@@ -104,50 +117,41 @@ const handleSubmit = async () => {
 .login-wrapper {
   background-color: #f8f9fa;
 }
-
 .login-card {
   border-radius: 1.5rem;
   background-color: white;
 }
-
 .btn {
   border-radius: 0.8rem;
   font-weight: 500;
 }
-
 .form-control {
   padding: 1rem;
   border-radius: 0.8rem;
   font-size: 1.1rem;
 }
-
 .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(243, 156, 18, 0.15);
   border-color: #f39c12;
 }
-
 .title {
   color: #f39c12;
   font-size: 2.5rem;
   font-weight: bold;
 }
-
 .forgot-password {
   color: #f39c12;
   text-decoration: none;
   font-weight: 500;
 }
-
 .forgot-password:hover {
   color: #e67e22;
   text-decoration: underline;
 }
-
 .btn:hover {
   background-color: #f39c12;
   border-color: #f39c12;
 }
-
 .form-label {
   font-weight: 500;
 }
