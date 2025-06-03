@@ -71,20 +71,7 @@
             </li>
           </ul>
         </div>
-
       </div>
-
-      <!--
-      <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
-      <div class="row">
-        <div class="col-12 text-center">
-          <p style="font-size: 0.875rem; color: #adb5bd;">
-            &copy; {{ new Date().getFullYear() }} FASHION. Todos os direitos reservados.
-          </p>
-        </div>
-      </div>
-      -->
-
     </div>
   </footer>
 </template>
@@ -92,84 +79,72 @@
 <script>
 export default {
   name: 'AppFooter'
-  // Nenhuma lógica específica necessária para este exemplo.
 }
 </script>
 
 <style scoped>
 .footer {
-  background-color: #000000; /* Fundo preto, conforme a imagem */
+  background-color: #000000; 
 }
 
 .footer-link {
   text-decoration: none;
-  color: #ffffff; /* Cor padrão dos links */
+  color: #ffffff; 
   font-size: 0.9rem;
 }
 
 .footer-link:hover {
   text-decoration: underline !important;
-  color: #f0c14b !important; /* Amarelo para hover, ajuste conforme a cor exata do Figma */
+  color: #f0c14b !important;
 }
 
-/* Estilo para os botões/links que contêm as imagens das redes sociais */
 .btn-social-icon-img {
-  background-color: #ebd96b; /* Cor de fundo amarela para os círculos */
-  border-radius: 50%; /* Deixa os contêineres redondos */
-  width: 38px;   /* Largura do círculo */
-  height: 38px;  /* Altura do círculo */
+  background-color: #ebd96b;
+  border-radius: 50%; 
+  width: 38px;
+  height: 38px;  
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   border: none;
-  padding: 0; /* Remove padding para a imagem preencher melhor */
+  padding: 0; 
 }
 
 .btn-social-icon-img img {
-  max-width: 60%; /* Ajusta o tamanho da imagem dentro do círculo. Experimente com este valor. */
-  max-height: 60%;
-  object-fit: contain; /* Garante que a imagem inteira apareça, mantendo a proporção */
+  max-width: 60%; 
+  object-fit: contain; 
 }
 
 .btn-social-icon-img:hover {
-  background-color: #e0b03b; /* Um tom de amarelo um pouco mais escuro para o hover */
+  background-color: #e0b03b; 
 }
 
-/* Removido: Comentários sobre Font Awesome, pois estamos usando imagens locais agora */
-
-/* Ajustes para espaçamento e alinhamento responsivo */
-.list-unstyled li { /* Aplicando diretamente ao li para melhor controle */
+.list-unstyled li { 
   margin-bottom: 0.5rem;
 }
 
 h5, h6 {
-  color: #ffffff; /* Garante que os títulos das seções sejam brancos */
+  color: #ffffff;
 }
 
-/* Para a coluna "FASHION", o texto é um pouco menor e mais claro */
-.col-lg-4 p { /* Seletor mais específico se necessário */
-  max-width: 300px; /* Limita a largura do texto descritivo */
-  margin-left: auto; /* Centraliza o bloco de texto se a coluna for mais larga */
-  margin-right: auto; /* Centraliza o bloco de texto se a coluna for mais larga */
-  text-align: left; /* Mantém o texto alinhado à esquerda dentro do seu bloco */
+.col-lg-4 p { 
+  max-width: 300px; 
+  margin-left: auto; 
+  margin-right: auto; 
+  text-align: left; 
 }
-/* Se a coluna FASHION precisar ser totalmente centralizada no mobile: */
+
 @media (max-width: 767.98px) {
-  .col-lg-4.col-md-6 { /* Target FASHION column on smaller screens */
+  .col-lg-4.col-md-6 { 
     text-align: center;
   }
   .col-lg-4.col-md-6 p {
      margin-left: auto;
      margin-right: auto;
   }
-  .col-lg-4.col-md-6 .mt-4 { /* Container dos ícones sociais */
+  .col-lg-4.col-md-6 .mt-4 { 
     text-align: center;
   }
 }
-
-
-/* Bootstrap 5 usa gy-4 (gutter y) para espaçamento vertical entre colunas em telas menores.
-   Se estiver usando uma versão anterior do Bootstrap, pode precisar de classes como mb-md-0.
-*/
 </style>

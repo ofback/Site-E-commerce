@@ -13,31 +13,29 @@
 
 <script>
 import ProductCard from './ProductCard.vue'
-
-// Novas imagens para categorias - substitua pelos caminhos corretos
-import hoodiesImage from '../assets/imagens/modelo_produtos1.png' // Exemplo: imagem do Figma para Hoodies
-import coatsImage from '../assets/imagens/modelo_produtos2.png'   // Exemplo: imagem do Figma para Coats
-import teesImage from '../assets/imagens/modelo_produtos3.png'     // Exemplo: imagem do Figma para Tees
+import hoodiesImage from '../assets/imagens/modelo_produtos1.png' 
+import coatsImage from '../assets/imagens/modelo_produtos2.png'   
+import teesImage from '../assets/imagens/modelo_produtos3.png'     
   
 export default {
   name: 'NewArrivals',
   components: { ProductCard },
   data() {
     return {
-      // Dados atualizados para categorias, conforme o Figma
+      
       categories: [
         {
-          image: hoodiesImage, // Use a imagem correspondente do Figma
+          image: hoodiesImage, 
           name: 'Hoodies & Sweatshirt',
-          link: '/category/hoodies' // Exemplo de link
+          link: '/category/hoodies' 
         },
         {
-          image: coatsImage, // Use a imagem correspondente do Figma
+          image: coatsImage, 
           name: 'Coats & Parkas',
           link: '/category/coats'
         },
         {
-          image: teesImage, // Use a imagem correspondente do Figma
+          image: teesImage,
           name: 'Tees & T-Shirt',
           link: '/category/tees'
         }

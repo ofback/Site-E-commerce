@@ -22,7 +22,7 @@ export default {
   props: {
     image: String,
     categoryName: String,
-    exploreLink: { // Link para onde o "Explore Now" vai levar
+    exploreLink: {  
       type: String,
       default: '#'
     }
@@ -32,31 +32,26 @@ export default {
 
 <style scoped>
 .product-category-card {
-  /* Opcional: Adicionar uma leve sombra se o Figma tiver */
-  /* box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); */
 }
 
 .image-container {
-  overflow: hidden; /* Garante que a imagem não exceda os limites do container */
-  /* Defina uma proporção para as imagens se necessário, ex: 4:3, 1:1 */
-  /* aspect-ratio: 4 / 5;  Ajuste esta proporção para corresponder ao Figma */
-  background-color: #f8f9fa; /* Cor de fundo caso a imagem não carregue ou tenha transparência */
+  overflow: hidden; 
+  background-color: #f8f9fa; 
 }
 
 .product-image {
   width: 100%;
-  /* Defina uma altura fixa ou min-height para as imagens terem o mesmo tamanho */
-  height: 350px; /* Ajuste esta altura conforme o design do Figma */
-  object-fit: cover; /* Faz a imagem cobrir toda a área, cortando se necessário */
-  transition: transform 0.3s ease; /* Efeito suave no hover */
+  height: 350px; 
+  object-fit: cover; 
+  transition: transform 0.3s ease; 
 }
 
 .product-category-card:hover .product-image {
-  transform: scale(1.05); /* Leve zoom na imagem ao passar o mouse */
+  transform: scale(1.05); 
 }
 
 .card-title {
-  font-size: 1.1rem; /* Ajuste o tamanho da fonte do nome da categoria */
+  font-size: 1.1rem; 
 }
 
 .explore-link {
@@ -69,13 +64,12 @@ export default {
 }
 
 .product-category-card:hover .explore-link svg {
-  transform: translateX(4px); /* Move a seta um pouco para a direita no hover */
+  transform: translateX(4px); 
 }
 
-/* Ajuste de responsividade se necessário para os cards */
 @media (max-width: 767.98px) {
   .product-image {
-    height: 280px; /* Altura menor para imagens no mobile */
+    height: 280px; 
   }
   .card-title {
     font-size: 1rem;

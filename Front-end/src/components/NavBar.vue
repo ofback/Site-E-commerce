@@ -51,17 +51,9 @@ import logo from '../assets/imagens/vetor_logo.png'
 
 <style scoped>
 .navbar-nav .nav-link:hover {
-  color: hsl(37, 90%, 51%); /* Cor original do hover mantida */
+  color: hsl(37, 90%, 51%); 
 }
 .router-link-active {
-  /* Esta regra ainda se aplicará aos outros links de navegação, o que é bom */
   color: #f1c916 !important; 
 }
-/* Se quiser ser mais específico para que .router-link-active não afete a marca de forma alguma,
-   você poderia tentar algo como:
-   .navbar-nav .nav-item .router-link-active {
-     color: #f1c916 !important;
-   }
-   Mas adicionar text-dark ao span da marca é geralmente mais simples e eficaz.
-*/
 </style>

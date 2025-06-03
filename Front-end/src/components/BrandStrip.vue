@@ -10,28 +10,28 @@
     </div>
   </section>
 </template>
-  
+ 
 <script>
-  import hm from '../assets/imagens/hm.svg'
-  import obey from '../assets/imagens/Obey.png' 
-  import shopify from '../assets/imagens/shopfy.svg' 
-  import lacoste from '../assets/imagens/lacoste.svg'
-  import levis from '../assets/imagens/levis.png' 
-  import amazon from '../assets/imagens/amazon.svg'
+  import hm from '../assets/imagens/hm.svg'
+  import obey from '../assets/imagens/Obey.png' 
+  import shopify from '../assets/imagens/shopfy.svg' 
+  import lacoste from '../assets/imagens/lacoste.svg'
+  import levis from '../assets/imagens/levis.png' 
+  import amazon from '../assets/imagens/amazon.svg'
 
-  export default {
-    name: 'BrandStrip',
-    data() {
-      return {
-        hm,
-        obey,
-        shopify,
-        lacoste,
-        levis,
-        amazon
-      }
-    }
-  }
+  export default {
+    name: 'BrandStrip',
+    data() {
+      return {
+        hm,
+        obey,
+        shopify,
+        lacoste,
+        levis,
+        amazon
+      }
+    }
+  }
 </script>
 
 <style scoped>

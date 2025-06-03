@@ -41,46 +41,43 @@
 
 <script>
 export default {
-  name: "FavoritesSection" 
-  // Se você quiser tornar as cores e os dados mais dinâmicos no futuro,
-  // você pode transformar os cards em um componente filho e passar dados/cores como props.
+  name: "FavoritesSection"
 };
 </script>
 
 <style scoped>
 .favorite-card .card-img-top {
-  height: 350px; /* Aumentei um pouco a altura, ajuste conforme o Figma */
-  object-fit: cover; /* Mantém o cover para preencher */
-  border-top-left-radius: var(--bs-card-border-radius); /* Garante que a imagem siga o arredondamento do card */
+  height: 350px; 
+  object-fit: cover;
+  border-top-left-radius: var(--bs-card-border-radius); 
   border-top-right-radius: var(--bs-card-border-radius);
 }
 
 .favorite-card .image-wrapper {
-  /* Este wrapper agora controla o fundo da imagem */
   border-top-left-radius: var(--bs-card-border-radius);
   border-top-right-radius: var(--bs-card-border-radius);
-  overflow: hidden; /* Para garantir que a imagem não escape do arredondamento do wrapper */
+  overflow: hidden; 
 }
 
 .favorite-card .card-body {
-  padding-top: 1rem; /* Ajuste o padding se necessário */
+  padding-top: 1rem; 
 }
 
 .favorite-card .card-title {
-  margin-bottom: 0.25rem; /* Menor margem abaixo do título */
-  font-size: 1.1rem; /* Ajuste o tamanho se o Figma for diferente */
+  margin-bottom: 0.25rem; 
+  font-size: 1.1rem;
 }
 
 .explore-now-link {
   text-decoration: none;
-  display: inline-flex; /* Para alinhar o texto e a seta */
+  display: inline-flex; 
   align-items: center;
-  font-size: 0.9rem; /* Ajuste o tamanho se o Figma for diferente */
+  font-size: 0.9rem; 
 }
 
 .explore-now-link:hover {
   text-decoration: underline;
-  color: var(--bs-link-hover-color); /* Cor de hover padrão do Bootstrap para links */
+  color: var(--bs-link-hover-color); 
 }
 
 .explore-now-link .bi-arrow-right {
@@ -90,16 +87,4 @@ export default {
 .explore-now-link:hover .bi-arrow-right {
   transform: translateX(3px);
 }
-
-/* Se precisar de cantos mais arredondados do que o padrão do Bootstrap: */
-/*
-.favorite-card {
-  border-radius: 0.75rem;  Ajuste este valor 
-}
-.favorite-card .image-wrapper,
-.favorite-card .card-img-top {
-  border-top-left-radius: 0.75rem; 
-  border-top-right-radius: 0.75rem;
-}
-*/
 </style>

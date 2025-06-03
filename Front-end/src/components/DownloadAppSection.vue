@@ -48,11 +48,10 @@ import appPhone from '../assets/imagens/AppMobile.png'
 }
 
 .app-mockup {
-  position: relative; /* Mantém position relative */
-  z-index: 1; /* Para ficar na frente das .decorative-lines */
+  position: relative; 
+  z-index: 1; 
 }
 
-/* Elementos Decorativos de Fundo - Círculos Coloridos */
 .decorative-circle {
   position: absolute;
   border-radius: 50%;
@@ -83,30 +82,27 @@ import appPhone from '../assets/imagens/AppMobile.png'
   left: 62%;  
 }
 
-/* Linhas Decorativas - Agora relativas à coluna da imagem */
 .decorative-lines {
   position: absolute;
-  /* Centraliza em relação ao novo pai (col-md-6 text-center position-relative) */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centraliza o container das linhas */
-  width: 320px; /* Ajuste a largura para se adequar ao tamanho do celular */
-  height: 320px; /* Ajuste a altura para se adequar ao tamanho do celular */
-  z-index: 0; /* Atrás do app-mockup */
-  opacity: 0.4; /* Ajuste a opacidade conforme necessário */
+  transform: translate(-50%, -50%); 
+  width: 320px; 
+  height: 320px; 
+  z-index: 0; 
+  opacity: 0.4;
 }
 
 .decorative-lines .line {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform-origin: center center; /* Garante que o scale seja do centro */
-  border: 1px solid #cccccc; /* Cor das linhas um pouco mais clara/sutil */
+  transform-origin: center center;
+  border: 1px solid #cccccc; 
   border-radius: 50%;
   box-sizing: border-box;
 }
 
-/* As escalas agora são relativas ao novo tamanho do .decorative-lines */
 .decorative-lines .line:nth-child(1) {
   width: 100%; 
   height: 100%; 
@@ -115,7 +111,7 @@ import appPhone from '../assets/imagens/AppMobile.png'
 .decorative-lines .line:nth-child(2) {
   width: 80%; 
   height: 80%; 
-  transform: translate(-50%, -50%) scale(0.8); /* A escala já está aplicada, não precisa recalcular a largura/altura aqui */
+  transform: translate(-50%, -50%) scale(0.8); 
 }
 .decorative-lines .line:nth-child(3) {
   width: 60%; 
@@ -131,7 +127,7 @@ import appPhone from '../assets/imagens/AppMobile.png'
   font-size: 0.9em;
 }
 
-@media (max-width: 767.98px) { /* Mobile */
+@media (max-width: 767.98px) {
   .download-section {
     padding-top: 3rem;
     padding-bottom: 3rem;

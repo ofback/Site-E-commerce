@@ -37,7 +37,6 @@ const handleSubmit = async () => {
 
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    // Aqui entraria a chamada à API de autenticação
     alert('Login simulado com sucesso!');
 
   } catch (error) {

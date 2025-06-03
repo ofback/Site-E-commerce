@@ -29,13 +29,13 @@
 </template>
 
 <script>
-import modelo_promocao from '../assets/imagens/modelo_promoção.png'; // Certifique-se que o nome do arquivo está correto
+import modelo_promocao from '../assets/imagens/modelo_promoção.png'; 
 export default {
   name: 'HeroBannerPromo',   
   data() {
     return {
       modelo_promocao,
-      showStars: true // Defina como true para mostrar o fundo com estrelas (requer CSS adicional)
+      showStars: true 
     }
   }
 }
@@ -71,29 +71,27 @@ export default {
   pointer-events: none;
 }
 
-/* Default (mobile-first) styles for the text block */
 .adjust-text-position {
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-top: 2rem; /* Espaço acima do texto no mobile, caso a imagem fique abaixo */
-  width: 100%; /* Ocupa a largura disponível */
-  max-width: 550px; /* Limita a largura máxima em telas menores para melhor leitura */
-  margin-left: auto; /* Centraliza o bloco se o container for mais largo */
+  margin-top: 2rem; 
+  width: 100%; 
+  max-width: 550px; 
+  margin-left: auto; 
   margin-right: auto;
-  position: relative; /* Garante que o z-index funcione corretamente se sobreposto */
-  z-index: 1; /* Para garantir que o texto fique acima de ::before e .stars-background */
+  position: relative;
+  z-index: 1; 
 }
 
-/* Desktop (lg and up) overrides for the text block */
 @media (min-width: 992px) {
   .adjust-text-position {
-    width: 48%;         /* Ocupa 48% da largura do container (lado direito) */
-    margin-left: auto;  /* Empurra este bloco para a direita */
-    margin-right: 0;    /* Garante que ele se ancore à direita quando margin-left é auto */
-    margin-top: 0;      /* Reseta a margem superior do mobile */
-    padding-left: 2.5rem; /* Padding interno à esquerda do texto */
-    padding-right: 2.5rem;/* Padding interno à direita do texto */
-    max-width: none;    /* Remove a limitação de max-width do mobile */
+    width: 48%;         
+    margin-left: auto;  
+    margin-right: 0;    
+    margin-top: 0;      
+    padding-left: 2.5rem; 
+    padding-right: 2.5rem;
+    max-width: none;    
   }
 }
 
@@ -120,7 +118,6 @@ export default {
   pointer-events: none;
 }
 
-/* Mobile adjustments for image and section padding */
 @media (max-width: 767.98px) { 
   .hero-promo-section {
     padding-bottom: 280px; 
@@ -144,7 +141,6 @@ export default {
   }
 }
 
-/* Tablet-specific adjustments (se necessário, entre mobile e desktop) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .adjust-text-position {
     padding-left: 2rem;
