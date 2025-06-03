@@ -36,7 +36,14 @@
           </li>
         </ul>
 
-        <div class="d-flex gap-2 mt-3 mt-lg-0">
+        <div class="d-flex gap-3 mt-3 mt-lg-0 align-items-center">
+          <!-- Ícone do carrinho -->
+          <router-link to="/carrinho" class="text-dark position-relative me-2">
+            <i class="bi bi-cart fs-4"></i>
+            <!-- Se quiser mostrar número de itens -->
+            <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">3</span> -->
+          </router-link>
+
           <router-link to="/usuarios/cadastrar" class="btn btn-dark rounded-3 px-4 fw-semibold">SIGN UP</router-link>
           <router-link to="/login" class="btn btn-dark rounded-3 px-4 fw-semibold">SIGN IN</router-link>
         </div>
@@ -51,9 +58,9 @@ import logo from '../assets/imagens/vetor_logo.png'
 
 <style scoped>
 .navbar-nav .nav-link:hover {
-  color: hsl(37, 90%, 51%); 
+  color: hsl(37, 90%, 51%);
 }
 .router-link-active {
-  color: #f1c916 !important; 
+  color: #f1c916 !important;
 }
 </style>
