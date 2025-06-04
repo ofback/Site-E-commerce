@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import axios from 'axios'; 
 
 const nome = ref('')
 const email = ref('')
@@ -8,6 +9,9 @@ const senha = ref('')
 const errors = ref({})
 const isLoading = ref(false)
 const router = useRouter()
+
+
+const API_REGISTER_URL = 'http://localhost:8080/usuarios'; 
 
 const validateForm = () => {
   errors.value = {}
@@ -33,12 +37,36 @@ const handleSubmit = async () => {
 
   try {
     isLoading.value = true
-    console.log('Usuário cadastrado:', { nome: nome.value, email: email.value, senha: senha.value })
-    await new Promise(resolve => setTimeout(resolve, 1000))
+
+    const userData = {
+      nome: nome.value,
+      email: email.value,
+      senha: senha.value
+    }
+
+    // Faz a requisição POST para a API
+    const response = await axios.post(API_REGISTER_URL, userData)
+
+    console.log('Usuário cadastrado com sucesso:', response.data) // response.data pode conter dados retornados pela API
     alert('Usuário cadastrado com sucesso!')
-    router.push('/login')
+    router.push('/login') // Redireciona para a página de login após o sucesso
+
   } catch (error) {
     console.error('Erro no cadastro:', error)
+    if (error.response) {
+      // A requisição foi feita e o servidor respondeu com um status de erro
+      // error.response.data pode conter uma mensagem específica da sua API
+      const apiErrorMessage = error.response.data?.message || error.response.data?.error || 'Erro ao processar sua solicitação.';
+      alert(`Erro no cadastro: ${apiErrorMessage} (Status: ${error.response.status})`)
+      // Você pode querer popular o objeto 'errors' com erros vindos da API também
+      // Ex: if (error.response.data.errors) { errors.value = { ...errors.value, ...error.response.data.errors } }
+    } else if (error.request) {
+      // A requisição foi feita mas não houve resposta (ex: servidor offline)
+      alert('Não foi possível conectar ao servidor. Verifique sua conexão e tente novamente.')
+    } else {
+      // Algo aconteceu ao configurar a requisição que acionou um erro
+      alert('Ocorreu um erro inesperado ao tentar realizar o cadastro.')
+    }
   } finally {
     isLoading.value = false
   }
