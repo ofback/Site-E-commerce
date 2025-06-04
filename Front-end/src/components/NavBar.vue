@@ -32,7 +32,7 @@
             <router-link class="nav-link text-dark fw-semibold" to="/favourite">FAVOURITE</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-dark fw-semibold" to="/lifestyle">LIFESTYLE</router-link>
+            <router-link class="nav-link text-dark fw-semibold" to="/sobre">SOBRE NÓS</router-link>
           </li>
         </ul>
 

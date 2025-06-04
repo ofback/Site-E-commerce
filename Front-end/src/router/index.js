@@ -6,6 +6,7 @@ import UserList from '../components/users/UserList.vue'
 import Carrinho from '../views/Carrinho.vue'
 import Products from '../views/Produtos.vue'
 import Promocoes from '../views/Promocoes.vue'
+import Sobre from '../views/Sobre.vue'
 
 const routes = [
   {
@@ -41,6 +42,11 @@ const routes = [
     path: '/promoções',
     name: 'Promocoes',
     component: Promocoes
+  },
+  {
+    path: '/sobre',
+    name: 'Sobre',
+    component: Sobre
   }
 ]
 
