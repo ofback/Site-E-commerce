@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import ItensFavorites from '../components/ItensFavorites.vue'; // Ajuste o caminho se necessário
+import ItensFavorites from '../favorites/ItensFavorites.vue'; // Ajuste o caminho se necessário
 
 // Importe suas imagens de exemplo para os favoritos
-import imgModelo5 from '../assets/imagens/modelo_produto5.png';
-import imgModelo1 from '../assets/imagens/modelo_produtos1.png';
-import imgModelo3 from '../assets/imagens/modelo_produtos3.png';
+import imgModelo5 from '../../assets/imagens/modelo_produto5.png';
+import imgModelo1 from '../../assets/imagens/modelo_produtos1.png';
+import imgModelo3 from '../../assets/imagens/modelo_produtos3.png';
 
 export default {
   name: 'PaginaFavoritos',

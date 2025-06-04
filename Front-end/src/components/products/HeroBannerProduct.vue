@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import modelo_promocao from '../assets/imagens/modelo_promoção.png'; 
+import modelo_promocao from '../../assets/imagens/modelo_promoção.png'; 
 export default {
   name: 'HeroBannerPromo',   
   data() {

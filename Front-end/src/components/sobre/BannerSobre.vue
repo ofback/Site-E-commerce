@@ -21,7 +21,7 @@
 
 <script>
 // Importe a sua imagem padrão que será usada como fundo
-import modeloCapaPadrao from '../assets/imagens/modelo_capa.png'; 
+import modeloCapaPadrao from '../../assets/imagens/modelo_capa.png'; 
 
 export default {
   name: 'SobreBanner',

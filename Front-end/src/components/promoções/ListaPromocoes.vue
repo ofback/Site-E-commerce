@@ -102,10 +102,10 @@
 
 <script>
 // Importe as suas imagens de produtos locais
-import imgModelo5 from '../assets/imagens/modelo_produto5.png';
-import imgModelo1 from '../assets/imagens/modelo_produtos1.png';
-import imgModelo2 from '../assets/imagens/modelo_produtos2.png';
-import imgModelo3 from '../assets/imagens/modelo_produtos3.png';
+import imgModelo5 from '../../assets/imagens/modelo_produto5.png';
+import imgModelo1 from '../../assets/imagens/modelo_produtos1.png';
+import imgModelo2 from '../../assets/imagens/modelo_produtos2.png';
+import imgModelo3 from '../../assets/imagens/modelo_produtos3.png';
 
 export default {
   name: 'PaginaPromocoes', // Nome do componente alterado
