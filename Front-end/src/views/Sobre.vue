@@ -7,5 +7,5 @@
 
 <script setup>
 import FooterPage from '../components/FooterPage.vue'
-import BannerSobre from '../components/BannerSobre.vue';
+import BannerSobre from '../components/sobre/BannerSobre.vue';
 </script> 

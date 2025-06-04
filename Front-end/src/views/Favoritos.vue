@@ -7,5 +7,5 @@
 
 <script setup>
 import FooterPage from '../components/FooterPage.vue'
-import FavoritesPage from '../components/FavoritesPage.vue';
+import FavoritesPage from '../components/favorites/FavoritesPage.vue';
 </script> 

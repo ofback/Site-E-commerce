@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HeroBannerPromo />
+    <HeroBannerProduct />
     <ListaProdutos />
     <FooterPage />
   </div>
@@ -8,6 +8,6 @@
 
 <script setup>
 import FooterPage from '../components/FooterPage.vue';
-import HeroBannerPromo from '../components/HeroBannerPromo.vue'
-import ListaProdutos from '../components/ListaProdutos.vue';
+import HeroBannerProduct from '../components/products/HeroBannerProduct.vue';
+import ListaProdutos from '../components/products/ListaProdutos.vue';
 </script> 
