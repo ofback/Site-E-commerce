@@ -23,7 +23,7 @@
       <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul class="navbar-nav gap-3 mx-auto">
           <li class="nav-item">
-            <router-link class="nav-link text-dark fw-semibold" to="/catalogue">CATALOGUE</router-link>
+            <router-link class="nav-link text-dark fw-semibold" to="/products">PRODUTOS</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link text-dark fw-semibold" to="/fashion">FASHION</router-link>

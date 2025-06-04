@@ -4,6 +4,7 @@ import Login from '../components/Login.vue'
 import UserForm from '../components/users/UserForm.vue'
 import UserList from '../components/users/UserList.vue' 
 import Carrinho from '../views/Carrinho.vue'
+import Products from '../views/Produtos.vue'
 
 const routes = [
   {
@@ -29,6 +30,11 @@ const routes = [
     path: '/usuarios',
     name: 'UserList',
     component: UserList
+  },
+  {
+    path: '/products',
+    name: 'Produtos',
+    component: Products
   }
 ]
 
