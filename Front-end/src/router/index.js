@@ -7,6 +7,7 @@ import Carrinho from '../views/Carrinho.vue'
 import Products from '../views/Produtos.vue'
 import Promocoes from '../views/Promocoes.vue'
 import Sobre from '../views/Sobre.vue'
+import Favoritos from '../views/Favoritos.vue'
 
 const routes = [
   {
@@ -47,6 +48,11 @@ const routes = [
     path: '/sobre',
     name: 'Sobre',
     component: Sobre
+  },
+  {
+    path: '/favoritos',
+    name: 'Favoritos',
+    component: Favoritos
   }
 ]
 
