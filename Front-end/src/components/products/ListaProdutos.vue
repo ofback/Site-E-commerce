@@ -95,10 +95,12 @@
 </template>
 
 <script>
-import imgModelo5 from '../../assets/imagens/modelo_produto5.png';
-import imgModelo1 from '../../assets/imagens/modelo_produtos1.png';
-import imgModelo2 from '../../assets/imagens/modelo_produtos2.png';
-import imgModelo3 from '../../assets/imagens/modelo_produtos3.png';
+import imgModelo1 from '../../assets/imagens/imagem_1.png';
+import imgModelo2 from '../../assets/imagens/imagem_2.png';
+import imgModelo3 from '../../assets/imagens/imagem_3.png';
+import imgModelo4 from '../../assets/imagens/imagem_4.png';
+import imgModelo5 from '../../assets/imagens/imagem_5.png';
+import imgModelo6 from '../../assets/imagens/imagem_6.png';
 
 export default {
   name: 'PaginaProdutos',
@@ -111,12 +113,12 @@ export default {
         { id: 'novidades', nome: 'Novidades' },
       ],
       produtos: [
-        { id: 1, nome: 'Produto Exemplo 1', preco: '49,99 €', imagem: imgModelo5, categoriaId: 'destaques' },
-        { id: 2, nome: 'Produto Exemplo 2', preco: '39,99 €', imagem: imgModelo1, categoriaId: 'destaques' },
-        { id: 3, nome: 'Produto Exemplo 3', preco: '79,99 €', imagem: imgModelo2, categoriaId: 'novidades' },
-        { id: 4, nome: 'Produto Exemplo 4', preco: '29,99 €', imagem: imgModelo3, categoriaId: 'novidades' },
-        { id: 5, nome: 'Produto Destaque Extra', preco: '99,99 €', imagem: 'https://placehold.co/400x400/E6C744/333333?text=Destaque+5', categoriaId: 'destaques' },
-        { id: 6, nome: 'Novidade Especial', preco: '65,50 €', imagem: 'https://placehold.co/400x400/333333/FFFFFF?text=Novidade+6', categoriaId: 'novidades' },
+        { id: 1, nome: 'Produto Exemplo 1', preco: '49,99 €', imagem: imgModelo1, categoriaId: 'destaques' },
+        { id: 2, nome: 'Produto Exemplo 2', preco: '39,99 €', imagem: imgModelo2, categoriaId: 'destaques' },
+        { id: 3, nome: 'Produto Exemplo 3', preco: '79,99 €', imagem: imgModelo3, categoriaId: 'novidades' },
+        { id: 4, nome: 'Produto Exemplo 4', preco: '29,99 €', imagem: imgModelo4, categoriaId: 'novidades' },
+        { id: 5, nome: 'Produto Destaque Extra', preco: '99,99 €', imagem: imgModelo5, categoriaId: 'destaques' },
+        { id: 6, nome: 'Novidade Especial', preco: '65,50 €', imagem: imgModelo6, categoriaId: 'novidades' },
       ]
     };
   },
@@ -154,11 +156,8 @@ export default {
       }
     },
     adicionarAoCarrinho(produto) {
-      // Lógica para adicionar o produto ao carrinho
-      // Por enquanto, apenas um alerta como exemplo
       alert(`"${produto.nome}" adicionado ao carrinho!`);
       console.log('Adicionando ao carrinho:', produto);
-      // Aqui você integraria com o seu sistema de carrinho (Vuex, Pinia, API, etc.)
     }
   }
 };
@@ -190,27 +189,29 @@ h2.fw-semibold {
   scroll-margin-top: 100px; 
 }
 
-/* Estilo para o card de produto e botão */
 .produto-card-novo {
   position: relative;
   overflow: hidden; 
   border-radius: 0.375rem; 
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
-  aspect-ratio: 1 / 1; 
+  aspect-ratio: 3 / 4;
   background-color: #e9ecef; 
-  display: flex; /* Adicionado para o wrapper da imagem preencher */
+  display: flex;
 }
 
 .produto-imagem-wrapper {
   width: 100%;
   height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .produto-imagem {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -245,17 +246,8 @@ h2.fw-semibold {
 }
 
 .btn-add-carrinho {
-  /* Estilo similar aos botões SIGN UP / SIGN IN */
-  /* background-color: #212529; /* Bootstrap btn-dark */
-  /* border-color: #212529; */
-  /* color: white; */
-  padding: 0.5rem 1rem; /* Ajuste o padding conforme necessário */
+  padding: 0.5rem 1rem;
   font-size: 0.9rem;
-  width: 100%; /* Para o botão ocupar toda a largura da coluna */
-}
-
-/* Para garantir que o card e o botão ocupem o espaço vertical corretamente */
-.col-12.col-sm-6.col-md-4.col-lg-3.d-flex.flex-column {
-  /* O d-flex flex-column já ajuda, o flex-grow-1 no card faz ele esticar */
+  width: 100%;
 }
 </style>

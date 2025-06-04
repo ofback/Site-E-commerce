@@ -1,117 +1,122 @@
 <template>
-  <section class="sobre-banner-section py-5">
-    <div class="container">
-      <div 
-        class="text-content-area text-center text-lg-start" 
-        :style="areaEstilo"
-      >
-        <!-- O conteúdo de texto será renderizado aqui, sobre a imagem de fundo e a cor de fundo -->
-        <h1 class="fw-bold display-5 sobre-titulo">{{ titulo }}</h1>
-        <div class="sobre-paragrafos mt-4">
-          <p v-for="(paragrafo, index) in paragrafos" :key="index" class="lead mb-3">
-            {{ paragrafo }}
-          </p>
+  <section class="sobre-banner-section">
+    <div class="banner-overlay"></div>
+    <div class="container position-relative">
+      <div class="row justify-content-center min-vh-75">
+        <div class="col-lg-8 text-center d-flex align-items-center">
+          <div class="banner-content text-white w-100">
+            <h1 class="display-4 fw-bold mb-4">Fashion: Estilo & Inovação</h1>
+            <p class="lead mb-4">Desde 2020, nossa marca tem se dedicado a trazer o melhor da moda com sustentabilidade e design inovador. Conheça nossa história de sucesso e compromisso com a qualidade.</p>
+            <div class="banner-stats d-flex flex-wrap justify-content-center gap-4 mt-5">
+              <div class="stat-item">
+                <h3 class="fw-bold mb-2">4+</h3>
+                <p class="mb-0">Anos no Mercado</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold mb-2">10k+</h3>
+                <p class="mb-0">Clientes Satisfeitos</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="fw-bold mb-2">500+</h3>
+                <p class="mb-0">Produtos Únicos</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Você pode adicionar um slot aqui se quiser colocar botões ou outros elementos no futuro -->
-        <!-- <slot name="actions"></slot> -->
       </div>
     </div>
   </section>
 </template>
 
 <script>
-// Importe a sua imagem padrão que será usada como fundo
-import modeloCapaPadrao from '../../assets/imagens/modelo_capa.png'; 
-
 export default {
-  name: 'SobreBanner',
-  props: {
-    titulo: {
-      type: String,
-      default: 'Sobre a Nossa História' // Título padrão
-    },
-    paragrafos: {
-      type: Array,
-      default: () => [ // 5 parágrafos padrão
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-        'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.'
-      ],
-      validator: val => val.length === 5 // Garante que sempre haverá 5 parágrafos
-    },
-    imagemFundoSrc: {
-      type: String,
-      default: modeloCapaPadrao // Imagem de fundo padrão
-    },
-    corFundoContainer: { // Cor de fundo para a área de texto (pode ser semi-transparente)
-      type: String,
-      default: 'rgba(255, 255, 255, 0.85)' // Um branco semi-transparente por padrão
-    },
-    corTexto: {
-      type: String,
-      default: '#212529' // Cor de texto escura por padrão para contraste
-    },
-    posicaoImagemFundo: {
-      type: String,
-      default: 'center center' // Padrão para background-position
-    }
-  },
-  computed: {
-    areaEstilo() {
-      return {
-        backgroundColor: this.corFundoContainer,
-        backgroundImage: `url(${this.imagemFundoSrc})`,
-        backgroundSize: 'cover',
-        backgroundPosition: this.posicaoImagemFundo,
-        color: this.corTexto,
-        padding: '3rem 2.5rem', // Padding interno para a área de texto
-        borderRadius: '0.5rem', // Cantos arredondados opcionais
-        boxShadow: '0 0.5rem 1.5rem rgba(0,0,0,0.1)', // Sombra suave opcional
-        position: 'relative', // Necessário se for adicionar overlays com pseudo-elementos
-        overflow: 'hidden', // Para garantir que o conteúdo não escape dos cantos arredondados
-      };
-    }
-  }
+  name: 'SobreBanner'
 }
 </script>
 
 <style scoped>
 .sobre-banner-section {
-  /* Estilo para a seção principal, se necessário. 
-     Pode ter uma cor de fundo diferente ou uma imagem de fundo global para a página. */
-  /* background-color: #f8f9fa; */ /* Exemplo de cor de fundo para a seção inteira */
+  position: relative;
+  background-image: url('../../assets/imagens/modelo_capa.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 6rem 0;
 }
 
-.text-content-area {
-  /* Garante que o texto não fique muito largo em telas grandes dentro do container */
-  max-width: 900px; /* Ajuste conforme necessário */
-  margin-left: auto;
-  margin-right: auto;
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
 }
 
-.sobre-titulo {
-  /* Estilos específicos para o título, se necessário, além das classes Bootstrap */
-  /* Exemplo: color: this.corTexto; já está no style binding, mas pode adicionar mais aqui */
+.min-vh-75 {
+  min-height: 75vh;
 }
 
-.sobre-paragrafos p.lead {
-  /* Estilos específicos para os parágrafos, se necessário */
-  font-size: 1.1rem; /* Ajuste o tamanho da fonte dos parágrafos */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 0.5rem;
+  min-width: 150px;
+}
+
+.stat-item h3 {
+  color: #E6C744;
+  font-size: 2rem;
+}
+
+.banner-content .lead {
+  font-size: 1.1rem;
   line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Media queries para responsividade do padding ou outros estilos, se necessário */
+@media (max-width: 991.98px) {
+  .sobre-banner-section {
+    padding: 4rem 0;
+  }
+
+  .min-vh-75 {
+    min-height: 60vh;
+  }
+
+  .banner-content {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .stat-item {
+    min-width: 120px;
+  }
+}
+
 @media (max-width: 767.98px) {
-  .text-content-area {
-    padding: 2rem 1.5rem;
+  .banner-content {
+    text-align: center;
   }
-  .sobre-titulo {
-    font-size: 2rem; /* Ajusta o tamanho do título para mobile */
+
+  .banner-stats {
+    justify-content: center;
   }
-  .sobre-paragrafos p.lead {
-    font-size: 1rem;
+
+  .stat-item {
+    min-width: 140px;
   }
 }
 </style>
