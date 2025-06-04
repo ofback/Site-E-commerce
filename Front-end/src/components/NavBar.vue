@@ -26,7 +26,7 @@
             <router-link class="nav-link text-dark fw-semibold" to="/products">PRODUTOS</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-dark fw-semibold" to="/fashion">FASHION</router-link>
+            <router-link class="nav-link text-dark fw-semibold" to="/promoções">PROMOS</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link text-dark fw-semibold" to="/favourite">FAVOURITE</router-link>
