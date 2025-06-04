@@ -36,16 +36,6 @@
                   <div class="produto-imagem-wrapper">
                     <img :src="produto.imagem" :alt="produto.nome" class="produto-imagem" 
                          onerror="this.onerror=null;this.src='https://placehold.co/400x400/cccccc/333333?text=Imagem+Indispon%C3%ADvel';"/>
-                    <!-- Botão de Favorito -->
-                    <button 
-                      class="btn-favorito"
-                      @click.stop="toggleFavorito(produto)"
-                      :class="{ 'favoritado': isFavorito(produto.id) }"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                      </svg>
-                    </button>
                   </div>
                   <div class="produto-info-mascara">
                     <h6 class="produto-nome">{{ produto.nome }}</h6>
@@ -83,16 +73,6 @@
                 <div class="produto-imagem-wrapper">
                   <img :src="produto.imagem" :alt="produto.nome" class="produto-imagem" 
                        onerror="this.onerror=null;this.src='https://placehold.co/400x400/cccccc/333333?text=Imagem+Indispon%C3%ADvel';"/>
-                  <!-- Botão de Favorito -->
-                  <button 
-                    class="btn-favorito"
-                    @click.stop="toggleFavorito(produto)"
-                    :class="{ 'favoritado': isFavorito(produto.id) }"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-                      <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-                    </svg>
-                  </button>
                 </div>
                 <div class="produto-info-mascara">
                   <h6 class="produto-nome">{{ produto.nome }}</h6>
@@ -147,7 +127,6 @@ export default {
         { id: 5, nome: 'Destaque Promocional Extra', precoAntigo: '120,00 €', preco: '99,99 €', imagem: imgModelo5, categoriaId: 'ofertas_semana' },
         { id: 6, nome: 'Queima Total de Estoque', precoAntigo: '85,50 €', preco: '65,50 €', imagem: imgModelo6, categoriaId: 'queima_stock' },
       ],
-      favoritos: [], // Array para armazenar IDs dos produtos favoritos
     };
   },
   methods: {
@@ -186,41 +165,9 @@ export default {
     adicionarAoCarrinho(produto) {
       alert(`"${produto.nome}" adicionado ao carrinho! (Preço Promocional: ${produto.preco})`);
       console.log('Adicionando ao carrinho:', produto);
-    },
-    toggleFavorito(produto) {
-      const index = this.favoritos.indexOf(produto.id);
-      if (index === -1) {
-        // Adiciona aos favoritos
-        this.favoritos.push(produto.id);
-        // Salva no localStorage
-        this.salvarFavoritos();
-        // Emite evento para atualizar outros componentes
-        this.$emit('adicionar-favorito', produto);
-      } else {
-        // Remove dos favoritos
-        this.favoritos.splice(index, 1);
-        // Salva no localStorage
-        this.salvarFavoritos();
-        // Emite evento para atualizar outros componentes
-        this.$emit('remover-favorito', produto.id);
-      }
-    },
-    isFavorito(produtoId) {
-      return this.favoritos.includes(produtoId);
-    },
-    salvarFavoritos() {
-      localStorage.setItem('favoritos', JSON.stringify(this.favoritos));
-    },
-    carregarFavoritos() {
-      const favoritosStorage = localStorage.getItem('favoritos');
-      if (favoritosStorage) {
-        this.favoritos = JSON.parse(favoritosStorage);
-      }
     }
   },
   created() {
-    // Carrega os favoritos quando o componente é criado
-    this.carregarFavoritos();
   }
 };
 </script>
@@ -264,7 +211,6 @@ h2.fw-semibold {
 }
 
 .produto-imagem-wrapper {
-  position: relative; /* Adicionado para posicionar o botão de favorito */
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -276,10 +222,10 @@ h2.fw-semibold {
 .produto-imagem {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Voltamos para cover mas com ajustes na posição */
-  object-position: top center; /* Foca a parte superior da imagem onde geralmente está o rosto */
+  object-fit: cover;
+  object-position: top center;
   transition: transform 0.3s ease-in-out;
-  padding: 0; /* Removemos o padding */
+  padding: 0;
 }
 
 .produto-card-novo:hover .produto-imagem {
@@ -301,7 +247,7 @@ h2.fw-semibold {
 .produto-nome {
   font-size: 0.9rem;
   font-weight: 600;
-  margin-bottom: 0.35rem; /* Aumentei um pouco a margem para os preços */
+  margin-bottom: 0.35rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; 
@@ -309,62 +255,26 @@ h2.fw-semibold {
 
 .precos-wrapper {
   display: flex;
-  align-items: baseline; /* Alinha os preços pela base */
+  align-items: baseline;
 }
 
 .preco-antigo {
-  font-size: 0.8rem; /* Tamanho menor para o preço antigo */
+  font-size: 0.8rem;
   text-decoration: line-through;
-  color: #adb5bd; /* Cor cinza claro para o preço antigo */
+  color: #adb5bd;
   margin-right: 0.5rem;
 }
 
 .preco-promocional {
-  font-size: 0.9rem; /* Tamanho do preço promocional */
+  font-size: 0.9rem;
   font-weight: bold;
-  color: #E6C744; /* Cor amarela para o preço promocional */
+  color: #E6C744;
 }
 
 .btn-add-carrinho {
   padding: 0.5rem 1rem; 
   font-size: 0.9rem;
   width: 100%; 
-}
-
-.btn-favorito {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 2;
-  color: #adb5bd;
-  padding: 0;
-}
-
-.btn-favorito:hover {
-  transform: scale(1.1);
-  background: white;
-}
-
-.btn-favorito.favoritado {
-  color: #E6C744; /* Cor amarela quando favoritado */
-}
-
-.btn-favorito svg {
-  transition: all 0.3s ease;
-}
-
-.btn-favorito:hover svg {
-  transform: scale(1.1);
 }
 
 </style>

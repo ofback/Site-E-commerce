@@ -1,8 +1,18 @@
 <template>
   <footer class="footer bg-black text-white pt-5 pb-4">
     <div class="container text-center text-md-left">
+      <!-- Admin Section -->
+      <div class="row mb-4 justify-content-center" v-if="isAdmin">
+        <div class="col-12 text-center">
+          <router-link to="/admin/produtos/cadastrar" class="btn btn-admin">
+            <i class="bi bi-plus-circle me-2"></i>
+            Cadastrar Produtos
+          </router-link>
+        </div>
+      </div>
+      <hr class="border-secondary mb-4" v-if="isAdmin">
+      
       <div class="row gy-4">
-
         <div class="col-lg-4 col-md-6 mb-4 mb-md-0 text-start">
           <h5 class="text-uppercase fw-bold mb-4" style="font-size: 1.8rem;">FASHION</h5>
           <h7 class="text-start" style="font-size: 0.9rem; color: #adb5bd;">
@@ -77,8 +87,30 @@
 </template>
 
 <script>
+import { auth } from '../services/auth';
+
 export default {
-  name: 'AppFooter'
+  name: 'AppFooter',
+  data() {
+    return {
+      isAdmin: false
+    }
+  },
+  created() {
+    // Verifica se é admin quando o componente é criado
+    this.checkAdmin();
+    // Adiciona listener para mudanças no localStorage
+    window.addEventListener('storage', this.checkAdmin);
+  },
+  beforeUnmount() {
+    // Remove o listener quando o componente é destruído
+    window.removeEventListener('storage', this.checkAdmin);
+  },
+  methods: {
+    checkAdmin() {
+      this.isAdmin = auth.isAdminUser();
+    }
+  }
 }
 </script>
 
@@ -133,6 +165,24 @@ h5, h6 {
   margin-left: auto; 
   margin-right: auto; 
   text-align: left; 
+}
+
+.btn-admin {
+  background-color: #E6C744;
+  color: #000;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-admin:hover {
+  background-color: #d4b73e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 199, 68, 0.3);
 }
 
 @media (max-width: 767.98px) {
